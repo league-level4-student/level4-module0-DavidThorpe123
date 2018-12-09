@@ -104,7 +104,7 @@ Cell[][] cells;
 		int[][] livingNeighbors = new int[cellsPerRow][cellsPerRow];
 		for (int i = 0; i < cells.length; i++) {
 			for (int j = 0; j < cells[i].length; j++) {
-				//livingNeighbors[getLivingNeighbors(i, j)][getLivingNeighbors(i, j)];
+	livingNeighbors[i][j] = getLivingNeighbors(i, j);
 			}
 		}
 		//8. check if each cell should live or die
