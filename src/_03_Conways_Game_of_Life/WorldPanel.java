@@ -108,7 +108,11 @@ Cell[][] cells;
 			}
 		}
 		//8. check if each cell should live or die
-	
+	for (int i = 0; i < cells.length; i++) {
+		for (int j = 0; j < cells[i].length; j++) {
+			cells[i][j].liveOrDie(getLivingNeighbors(i, j));
+		}
+	}
 		
 		
 		
@@ -120,7 +124,32 @@ Cell[][] cells;
 	//   living neighbors there are of the 
 	//   cell identified by x and y
 	public int getLivingNeighbors(int x, int y){
-		return 0;
+		int n = 0;
+		if (cells[x - 1][y].isAlive) {
+			n++;
+		}
+		if (cells[x + 1][y].isAlive) {
+			n++;
+		}
+		if (cells[x - 1][y - 1].isAlive) {
+			n++;
+		}
+		if (cells[x + 1][y + 1].isAlive) {
+			n++;
+		}
+		if (cells[x + 1][y - 1].isAlive) {
+			n++;
+		}
+		if (cells[x - 1][y + 1].isAlive) {
+			n++;
+		}
+		if (cells[x][y - 1].isAlive) {
+			n++;
+		}
+		if (cells[x][y + 1].isAlive) {
+			n++;
+		}
+		return n;
 	}
 
 	@Override
