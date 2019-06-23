@@ -30,7 +30,7 @@ public class ColorSelectionPanel extends JPanel implements MouseListener, Change
 	private int b = 0;
 	
 	private JLabel colorLabel;
-	private BufferedImage colorImage;
+	//private BufferedImage colorImage;
 	
 	public ColorSelectionPanel() {
 		rSlider = new JSlider(JSlider.VERTICAL);
@@ -54,15 +54,15 @@ public class ColorSelectionPanel extends JPanel implements MouseListener, Change
 		addMouseListener(this);
 		
 		colorLabel = new JLabel();
-		colorImage = new BufferedImage(MAX_COLOR, MAX_COLOR, BufferedImage.TYPE_INT_RGB);
+		//colorImage = new BufferedImage(MAX_COLOR, MAX_COLOR, BufferedImage.TYPE_INT_RGB);
 		color = new Color(r, g, b);
-		for(int i = 0; i < MAX_COLOR; i++) {
-			for(int j = 0; j < MAX_COLOR; j++) {
-				colorImage.setRGB(j, i, color.getRGB());
-			}
-		}
+		//for(int i = 0; i < MAX_COLOR; i++) {
+			//for(int j = 0; j < MAX_COLOR; j++) {
+				//colorImage.setRGB(j, i, color.getRGB());
+			//}
+		//}
 		
-		colorLabel.setIcon(new ImageIcon(colorImage));
+		//colorLabel.setIcon(new ImageIcon(colorImage));
 		add(colorLabel);
 		
 		add(new JLabel("red"));
@@ -116,13 +116,13 @@ public class ColorSelectionPanel extends JPanel implements MouseListener, Change
 		
 		color = new Color(r, g, b);
 
-		for(int i = 0; i < MAX_COLOR; i++) {
-			for(int j = 0; j < MAX_COLOR; j++) {
-				colorImage.setRGB(j, i, color.getRGB());
-			}
-		}
+		//for(int i = 0; i < MAX_COLOR; i++) {
+			//for(int j = 0; j < MAX_COLOR; j++) {
+				//colorImage.setRGB(j, i, color.getRGB());
+			//}
+		//}
 		
-		colorLabel.setIcon(new ImageIcon(colorImage));
-		add(colorLabel);
+		//colorLabel.setIcon(new ImageIcon(colorImage));
+		//add(colorLabel);
 	}
 }
